@@ -1,6 +1,13 @@
 defmodule ElixirStatusClient.Parser do
   alias ElixirStatusClient.Post
 
+  def next_page_url(html) do
+    html
+    |> Floki.find("a.pagination-item.newer")
+    |> Floki.attribute("href")
+    |> hd
+  end
+
   def posts(html) do
     html
     |> Floki.find("div.post[data-posting-uid]")

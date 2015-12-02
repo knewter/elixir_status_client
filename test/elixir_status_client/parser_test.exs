@@ -16,4 +16,9 @@ defmodule ElixirStatusClient.ParserTest do
     assert first_post.meta.date == "28 Nov"
     assert first_post.meta.author =~ ~r/ryanswapp/
   end
+
+  test "finding the next page url" do
+    next_page_url = Parser.next_page_url(@html)
+    assert next_page_url == "/?page=2"
+  end
 end
