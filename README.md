@@ -1,5 +1,7 @@
 # ElixirStatusClient
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/365b2690-dbb9-444b-be0c-1cfdcf3fc56b/620603/badge.svg)](https://semaphoreci.com/knewter/elixir_status_client)
+
 This is a client library to fetch data from the
 [ElixirStatus](http://www.elixirstatus.com) website using Floki to parse the
 data into a structured format, and using HTTPoison to fetch the data, turning
